@@ -36,3 +36,7 @@ load_all aliases
 echo ""
 echo "loading plugins"
 load_all plugins
+
+echo ""
+echo "loading completions"
+load_all completions
