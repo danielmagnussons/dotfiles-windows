@@ -4,17 +4,21 @@ cite _about _param _example _group _author _version
 
 path="$HOME/dotfiles"
 echo "$path"
-
-
 export PATH="$path/env:$PATH"
 
 source $path/theme/prompt.sh
 
-# Larger bash history (default is 500)
 export HISTFILESIZE=10000
 export HISTSIZE=10000
+# Erase duplicates
+export HISTCONTROL="ignoredups"
+export HISTCONTROL=erasedups
+export AUTOFEATURE=true autotest
 
-# colored grep
+PROMPT_COMMAND='history -a'
+
+
+
 export GREP_COLOR='1;33'
 
 
@@ -25,7 +29,6 @@ function load_all() {
       filename="$(basename ${src})"
       [ ${filename:0:1} = "_" ] && continue
       dest="${path}/${file_type}/${filename}"
-      echo $dest
       source $dest
   done
 }
