@@ -8,7 +8,7 @@ Yes,  works pretty nicely with msys git,  not many commands have been ported, bu
 
 
 ## Todo
+document everything...
 Sublime settings?
-.gitconfig restructure
 more windows specific stuff
 port byobu somehow?

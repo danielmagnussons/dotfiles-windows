@@ -10,6 +10,7 @@ ntuser.*
 ntuser.ini
 
 # Do not ignore
+!.bashrc
 !.gitignore
 !.gitconfig
 !.gitignore_global
