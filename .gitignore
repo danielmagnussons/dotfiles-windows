@@ -1,0 +1,45 @@
+
+
+
+# Try wildcard out most stuff
+_*
+.*
+*.sv
+*.log
+ntuser.*
+ntuser.ini
+
+# Do not ignore
+!.gitignore
+!.gitconfig
+!.gitignore_global
+
+# Windows files
+AppData
+Application Data
+Contacts
+Cookies
+Desktop
+Documents
+Downloads
+Dropbox
+Favorites
+Links
+Local Settings
+Music
+My Documents
+NetHood
+Pictures
+PrintHood
+Recent
+Roaming
+Saved Games
+Searches
+SendTo
+Start Menu
+Templates
+Videos
+
+# Misc
+android-sdks
+pip

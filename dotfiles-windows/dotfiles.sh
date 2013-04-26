@@ -6,7 +6,7 @@ echo "$path"
 export PATH="$path/env:$PATH"
 
 source $path/theme/prompt.sh
-source $path/completions.sh
+source $path/completions/ssh.completion.bash
 
 export HISTFILESIZE=10000
 export HISTSIZE=10000
