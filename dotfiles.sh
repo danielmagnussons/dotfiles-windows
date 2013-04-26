@@ -36,4 +36,10 @@ function load_all() {
   done
 }
 
+echo ""
+echo "loading aliases"
 load_all aliases
+
+echo ""
+echo "loading plugins"
+load_all plugins
