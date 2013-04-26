@@ -13,6 +13,7 @@ alias ls='ls -Xlah -F --color --show-control-chars'
 alias c='clear'
 alias k='clear'
 alias cls='clear'
+alias q='exit'
 
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories

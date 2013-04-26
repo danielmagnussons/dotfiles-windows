@@ -1,10 +1,13 @@
 
-
 # support 'plumbing' metadata
 cite _about _param _example _group _author _version
 
 path="$HOME/dotfiles"
 echo "$path"
+
+
+export PATH="$path/env:$PATH"
+
 source $path/theme/prompt.sh
 
 # Larger bash history (default is 500)
@@ -12,7 +15,6 @@ export HISTFILESIZE=10000
 export HISTSIZE=10000
 
 # colored grep
-export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
 
