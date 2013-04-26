@@ -1,4 +1,8 @@
 
+
+# support 'plumbing' metadata
+cite _about _param _example _group _author _version
+
 path="$HOME/dotfiles"
 echo "$path"
 source $path/theme/prompt.sh
