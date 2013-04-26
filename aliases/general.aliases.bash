@@ -5,15 +5,15 @@ alias g='git '
 # autocomplete for g
 complete -o default -o nospace -F _git g
 
+
+# Directory
 LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 alias ls='ls -Xlah -F --color --show-control-chars'
-
-
-alias c='clear'
-alias k='clear'
-alias cls='clear'
-alias q='exit'
+# List only directories
+alias lsd='ls -l ${colorflag} | grep "^d"'
+alias	md='mkdir -p'
+alias	rd='rmdir'
 
 alias ..='cd ..'         # Go up one directory
 alias ...='cd ../..'     # Go up two directories
@@ -21,14 +21,29 @@ alias ....='cd ../../..' # Go up two directories
 alias -- -='cd -'        # Go back
 
 
-alias h='history'
 
-# Tree
-if [ ! -x "$(which tree 2>/dev/null)" ]
-then
-  alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-fi
+# Shortcuts
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/Projects"
+alias g="git"
+alias h="history"
+alias j="jobs"
+alias v="vim"
+alias m="mate ."
+alias s="subl ."
+alias o="open"
+alias oo="open ."
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+alias q='exit'
 
-# Directory
-alias	md='mkdir -p'
-alias	rd='rmdir'
+
+# Misc
+# Get week number
+alias week='date +%V'
+
+# URL-encode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
