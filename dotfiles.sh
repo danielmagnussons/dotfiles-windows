@@ -1,6 +1,5 @@
 
-# support 'plumbing' metadata
-cite _about _param _example _group _author _version
+
 
 path="$HOME/dotfiles"
 echo "$path"
@@ -8,16 +7,13 @@ export PATH="$path/env:$PATH"
 
 source $path/theme/prompt.sh
 
+
 export HISTFILESIZE=10000
 export HISTSIZE=10000
-# Erase duplicates
 export HISTCONTROL="ignoredups"
 export HISTCONTROL=erasedups
 export AUTOFEATURE=true autotest
-
 PROMPT_COMMAND='history -a'
-
-
 
 export GREP_COLOR='1;33'
 
