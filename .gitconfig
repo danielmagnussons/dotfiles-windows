@@ -1,0 +1,90 @@
+[user]
+  name = Daniel Magnusson
+  email = email
+
+[github]
+  user = danielmagnussons
+
+[core]
+  autocrlf = input
+  filemode = false
+  editor = 'C:/Program Files/Sublime Text 2/sublime_text.exe' --wait
+  excludesfile = ~/.gitignore_global
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
+  find = log -i --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep 
+  undo = reset --soft HEAD^
+  pr = pull --rebase
+  last = log -1 HEAD
+  tree = log --graph --oneline --decorate=full --color=always --branches
+
+  # View the SHA, description, and history graph of the latest 20 commits
+  l = log --pretty=oneline -n 20 --graph
+
+  # Show the diff between the latest commit and the current state
+  d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
+
+  # Switch to a branch, creating it if necessary
+  go = checkout -B
+
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+
+[pull]
+  rebase = true
+
+[merge]
+	tool = bc3
+
+[diff]
+	tool = bc3
+	external = gitdiff.bat
+
+[mergetool "bc3"]
+	path = C:/Program Files (x86)/Beyond Compare 3/BCompare.exe
+
+[branch]
+	autosetuprebase = always
+
+[gerrit]
+	createchangeid = true
+	
+[color "branch"]
+  current = yellow reverse
+  local = yellow 
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+
+# URL shorthands
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+  insteadOf = "github:"
+[url "git@gist.github.com:"]
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+  insteadOf = "gist:"
