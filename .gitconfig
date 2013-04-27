@@ -38,6 +38,8 @@
   branches = branch -a
   remotes = remote -v
 
+[help]
+  browser = open
 
 [pull]
   rebase = true
