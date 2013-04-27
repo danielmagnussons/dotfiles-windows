@@ -19,4 +19,3 @@ mv dotfiles-windows/.* ~/
 - [ ] document everything...
 - [ ] Sublime settings?
 - [ ] more windows specific stuff
-- [ ] port byobu somehow?
