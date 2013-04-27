@@ -183,3 +183,13 @@ buf ()
     local filetime=$(date +%Y%m%d_%H%M%S)
     cp ${filename} ${filename}_${filetime}
 }
+
+# print working file
+pwf() {
+  echo "$PWD/$1"
+}
+
+# make dir and cd into it
+mcd() {
+  mkdir -p "$1" && cd "$1"
+}

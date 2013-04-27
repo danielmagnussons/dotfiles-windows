@@ -1,5 +1,8 @@
 
 
+alias reload='source ~/.bashrc && echo "sourced ~/.bashrc"'
+
+# git
 alias gits="git status"
 alias g='git '
 # autocomplete for g
@@ -40,6 +43,8 @@ alias k='clear'
 alias cls='clear'
 alias q='exit'
 
+
+alias tf='tail -F -n200'
 
 # Misc
 # Get week number

@@ -15,3 +15,8 @@ function sshlist() {
 
   awk '$1 ~ /Host$/ { print $2 }' ~/.ssh/config
 }
+
+function sshkey() {
+  ssh $1 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys" < ~/.ssh/id_?sa.pub
+  echo "sshkey done."
+}
