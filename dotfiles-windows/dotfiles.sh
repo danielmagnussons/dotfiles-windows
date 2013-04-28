@@ -17,6 +17,7 @@ PROMPT_COMMAND='history -a'
 
 export GREP_COLOR='1;33'
 
+unset MAILCHECK
 
 function load_all() {
   file_type=$1

@@ -17,21 +17,19 @@
   br = branch
   co = checkout
   df = diff
-  lg = log -p
-  find = log -i --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep 
-  undo = reset --soft HEAD^
   pr = pull --rebase
+  undo = reset --soft HEAD^
+  # Switch to a branch, creating it if necessary
+  go = checkout -B
+  
+  l = log --pretty=oneline -n 20 --graph
+  lg = log -p
   last = log -1 HEAD
   tree = log --graph --oneline --decorate=full --color=always --branches
-
-  # View the SHA, description, and history graph of the latest 20 commits
-  l = log --pretty=oneline -n 20 --graph
+  find = log -i --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep 
 
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
-
-  # Switch to a branch, creating it if necessary
-  go = checkout -B
 
   # Show verbose output about tags, branches or remotes
   tags = tag -l
@@ -59,7 +57,8 @@
 
 [gerrit]
 	createchangeid = true
-	
+
+# Colors
 [color "branch"]
   current = yellow reverse
   local = yellow 
@@ -76,8 +75,7 @@
   changed = green
   untracked = cyan
 
-
-# URL shorthands
+# URL shorteners
 [url "git@github.com:"]
   insteadOf = "gh:"
   pushInsteadOf = "github:"

@@ -1,5 +1,10 @@
 
 # Aliases
+alias g='git '
+# autocomplete for g
+complete -o default -o nospace -F _git g
+
+alias gits="git status"
 alias gcl='git clone'
 alias ga='git add'
 alias gall='git add .'

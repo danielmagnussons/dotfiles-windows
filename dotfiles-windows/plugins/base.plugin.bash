@@ -148,10 +148,16 @@ buf ()
 
 # print working file
 pwf() {
-  echo "$PWD/$1"
+    echo "$PWD/$1"
 }
 
 # make dir and cd into it
 mcd() {
-  mkdir -p "$1" && cd "$1"
+    mkdir -p "$1" && cd "$1"
+}
+
+# Usage: pls [<var>]
+# List path entries of PATH or environment variable <var>.
+printenv () { 
+    eval echo \$${1:-PATH} |tr : '\n'; 
 }
