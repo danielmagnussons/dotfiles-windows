@@ -16,7 +16,7 @@
   ci = commit
   br = branch
   co = checkout
-  df = diff
+  df = difftool
   pr = pull --rebase
   undo = reset --soft HEAD^
   # Switch to a branch, creating it if necessary
@@ -42,15 +42,22 @@
 [pull]
   rebase = true
 
-[merge]
-	tool = bc3
+[difftool]
+  prompt = false
+
+[difftool "bc3"]
+  path = "C:/Program Files (x86)/Beyond Compare 3/BCompare.exe"
+  cmd = "$LOCAL" "$REMOTE"
 
 [diff]
-	tool = bc3
-	external = gitdiff.bat
+  tool = bc3
 
 [mergetool "bc3"]
-	path = C:/Program Files (x86)/Beyond Compare 3/BCompare.exe
+  prompt = false
+  path = C:/Program Files (x86)/Beyond Compare 3/BCompare.exe
+
+[merge]
+	tool = bc3
 
 [branch]
 	autosetuprebase = always
@@ -80,11 +87,14 @@
   insteadOf = "gh:"
   pushInsteadOf = "github:"
   pushInsteadOf = "git://github.com/"
+
 [url "git://github.com/"]
   insteadOf = "github:"
+
 [url "git@gist.github.com:"]
   insteadOf = "gst:"
   pushInsteadOf = "gist:"
   pushInsteadOf = "git://gist.github.com/"
+
 [url "git://gist.github.com/"]
   insteadOf = "gist:"

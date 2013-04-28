@@ -1,5 +1,4 @@
 
-# Aliases
 alias g='git '
 # autocomplete for g
 complete -o default -o nospace -F _git g
