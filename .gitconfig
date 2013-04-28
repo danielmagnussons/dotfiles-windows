@@ -36,6 +36,7 @@
   branches = branch -a
   remotes = remote -v
 
+
 [help]
   browser = open
 
@@ -47,10 +48,12 @@
 
 [difftool "bc3"]
   path = "C:/Program Files (x86)/Beyond Compare 3/BCompare.exe"
-  cmd = "$LOCAL" "$REMOTE"
+
 
 [diff]
   tool = bc3
+  prompt = false
+  external = gitdiff-all.sh 
 
 [mergetool "bc3"]
   prompt = false
