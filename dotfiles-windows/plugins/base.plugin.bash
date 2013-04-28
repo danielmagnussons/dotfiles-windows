@@ -23,34 +23,6 @@ myip ()
     echo -e "Your public IP is: ${echo_bold_green} $res ${echo_normal}"
 }
 
-
-pickfrom ()
-{
-    about 'picks random line from file'
-    param '1: filename'
-    example '$ pickfrom /usr/share/dict/words'
-    group 'base'
-    local file=$1
-    [ -z "$file" ] && reference $FUNCNAME && return
-    length=$(cat $file | wc -l)
-    n=$(expr $RANDOM \* $length \/ 32768 + 1)
-    head -n $n $file | tail -1
-}
-
-pass ()
-{
-    about 'generates random password from dictionary words'
-    param 'optional integer length'
-    param 'if unset, defaults to 4'
-    example '$ pass'
-    example '$ pass 6'
-    group 'base'
-    local i pass length=${1:-4}
-    pass=$(echo $(for i in $(eval echo "{1..$length}"); do pickfrom /usr/share/dict/words; done))
-    echo "With spaces (easier to memorize): $pass"
-    echo "Without (use this as the pass): $(echo $pass | tr -d ' ')"
-}
-
 pmdown ()
 {
     about 'preview markdown file in a browser'
@@ -91,16 +63,6 @@ pman ()
     example '$ pman bash'
     group 'base'
     man -t "${1}" | open -f -a $PREVIEW
-}
-
-
-pcurl ()
-{
-    about 'download file and Preview it'
-    param '1: download URL'
-    example '$ pcurl http://www.irs.gov/pub/irs-pdf/fw4.pdf'
-    group 'base'
-    curl "${1}" | open -f -a $PREVIEW
 }
 
 pri ()
